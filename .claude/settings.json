@@ -17,7 +17,9 @@
       "Bash(mv cek-ongkir:*)",
       "Bash(gh repo:*)",
       "Bash(npx vercel:*)",
-      "Bash(curl -s \"https://public-api.wordpress.com/rest/v1.1/sites/fardalintrans7.wordpress.com/posts/?number=3\")"
+      "Bash(curl -s \"https://public-api.wordpress.com/rest/v1.1/sites/fardalintrans7.wordpress.com/posts/?number=3\")",
+      "Bash(npx supabase:*)",
+      "Bash(curl -s -X POST https://dxkmkljoqaotblgvlmsm.supabase.co/rest/v1/shipments -H 'apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4a21rbGpvcWFvdGJsZ3ZsbXNtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU1MTM1MzQsImV4cCI6MjA5MTA4OTUzNH0.aGYSvL7waMpENa_FWCO7_dz4-2NsxEDcBlNslz9ZSL0' -H 'Content-Type: application/json' -H 'Prefer: return=representation' -d '{\"sender\":\"Test\",\"receiver\":\"Test2\",\"origin\":\"Cirebon\",\"destination\":\"Jakarta\",\"service\":\"Angkutan\",\"vehicle\":\"pickup\",\"receiver_phone\":\"08123456789\"}')"
     ],
     "additionalDirectories": [
       "/Users/it23/personal/fardalin-trans"
