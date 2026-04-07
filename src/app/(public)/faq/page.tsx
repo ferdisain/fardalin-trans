@@ -5,6 +5,7 @@ import { AccordionItem } from "@/components/ui/accordion";
 import { ButtonLink } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import { faqs } from "@/data/faq";
+import { FAQJsonLd } from "@/components/seo/json-ld";
 
 export const metadata: Metadata = {
   title: "FAQ",
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 export default function FAQPage() {
   return (
     <>
+      <FAQJsonLd faqs={faqs} />
       <PageHeader
         title="Pertanyaan Umum"
         description="Temukan jawaban untuk pertanyaan yang sering ditanyakan seputar layanan kami."

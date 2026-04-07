@@ -40,6 +40,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className={jakarta.variable}>
+      <head>
+        <meta name="theme-color" content="#006b3f" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <link rel="apple-touch-icon" href="/icons/icon-192.svg" />
+      </head>
       <body className="font-sans antialiased">
         {children}
       </body>

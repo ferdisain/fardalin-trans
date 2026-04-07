@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/it23/personal/**)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "WebFetch(domain:localhost)",
+      "Bash(curl -s http://localhost:3000/admin)",
+      "Bash(curl -s http://localhost:3000/admin/login)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/tracking)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/admin/login)",
+      "Bash(mv page.tsx \"\\(public\\)/page.tsx\")",
+      "Bash(mv not-found.tsx \"\\(public\\)/not-found.tsx\")",
+      "Bash(mv tentang-kami:*)",
+      "Bash(mv layanan:*)",
+      "Bash(mv cek-ongkir:*)",
+      "Bash(gh repo:*)",
+      "Bash(npx vercel:*)",
+      "Bash(curl -s \"https://public-api.wordpress.com/rest/v1.1/sites/fardalintrans7.wordpress.com/posts/?number=3\")"
+    ],
+    "additionalDirectories": [
+      "/Users/it23/personal/fardalin-trans"
+    ]
+  }
+}

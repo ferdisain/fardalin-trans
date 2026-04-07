@@ -75,6 +75,14 @@ export default function NewOrderPage() {
             />
           </div>
 
+          <Input
+            id="receiver_phone"
+            name="receiver_phone"
+            type="tel"
+            label="No. Telepon Penerima"
+            placeholder="08xx-xxxx-xxxx"
+          />
+
           <div className="grid gap-4 sm:grid-cols-2">
             <Select
               id="origin"

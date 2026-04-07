@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { UpdateStatusForm } from "./update-status-form";
 import { EditOrderForm } from "./edit-order-form";
 import { OrderActions } from "./order-actions";
+import { PrintLabel } from "./print-label";
 
 export default async function OrderDetailPage({
   params,
@@ -84,7 +85,8 @@ export default async function OrderDetailPage({
         </div>
 
         {/* Action Buttons */}
-        <div className="mt-4">
+        <div className="mt-4 flex flex-wrap items-center gap-2">
+          <PrintLabel shipment={shipment} />
           <OrderActions
             shipmentId={shipment.id}
             shipmentStatus={shipment.status}
@@ -153,6 +155,10 @@ export default async function OrderDetailPage({
             <UpdateStatusForm
               shipmentId={shipment.id}
               destination={shipment.destination}
+              resi={shipment.resi}
+              receiver={shipment.receiver}
+              receiverPhone={shipment.receiver_phone}
+              origin={shipment.origin}
             />
           </Card>
         )}

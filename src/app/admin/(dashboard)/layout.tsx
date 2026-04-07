@@ -4,6 +4,8 @@ import {
   LayoutDashboard,
   Plus,
   LogOut,
+  BarChart3,
+  Users,
 } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { signOut } from "@/app/admin/login/actions";
@@ -55,6 +57,20 @@ export default async function AdminDashboardLayout({
             >
               <Plus className="h-4 w-4" />
               Order Baru
+            </Link>
+            <Link
+              href="/admin/analytics"
+              className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100"
+            >
+              <BarChart3 className="h-4 w-4" />
+              Analytics
+            </Link>
+            <Link
+              href="/admin/users"
+              className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100"
+            >
+              <Users className="h-4 w-4" />
+              Kelola User
             </Link>
           </nav>
 
