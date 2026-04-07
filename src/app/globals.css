@@ -1,26 +1,140 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Brand Colors - Green */
+  --color-brand-50: #e6f5ee;
+  --color-brand-100: #b3e0cc;
+  --color-brand-200: #80cba9;
+  --color-brand-300: #4db687;
+  --color-brand-400: #26a66d;
+  --color-brand-500: #008a54;
+  --color-brand-600: #006b3f;
+  --color-brand-700: #005432;
+  --color-brand-800: #003d24;
+  --color-brand-900: #002617;
+
+  /* Gold Accent */
+  --color-gold-50: #fff9e6;
+  --color-gold-100: #ffecb3;
+  --color-gold-200: #ffdf80;
+  --color-gold-300: #ffd24d;
+  --color-gold-400: #ffc726;
+  --color-gold-500: #d4a017;
+  --color-gold-600: #b8860b;
+
+  /* Neutrals */
+  --color-cream: #faf8f2;
+  --color-cream-dark: #f0ece0;
+  --color-brand-red: #c41e3a;
+
+  /* Font */
+  --font-sans: var(--font-jakarta);
+
+  /* Animation */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-smooth: cubic-bezier(0.77, 0, 0.175, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Base styles */
+body {
+  background-color: var(--color-cream);
+  color: #1a1a1a;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes pulse-subtle {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Utility animation classes */
+.animate-fade-up {
+  animation: fade-up 500ms var(--ease-out-expo) both;
+}
+
+.animate-fade-in {
+  animation: fade-in 300ms var(--ease-out-expo) both;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 300ms var(--ease-out-expo) both;
+}
+
+.animate-slide-out-right {
+  animation: slide-out-right 200ms ease-in both;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+/* Stagger delays */
+.stagger-1 { animation-delay: 0ms; }
+.stagger-2 { animation-delay: 60ms; }
+.stagger-3 { animation-delay: 120ms; }
+.stagger-4 { animation-delay: 180ms; }
+.stagger-5 { animation-delay: 240ms; }
+.stagger-6 { animation-delay: 300ms; }
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
 }
